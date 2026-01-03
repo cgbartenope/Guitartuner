@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete directory of guitar tuners: free online guitar tuners, best clip-on and pedal tuners for sale, and comprehensive guitar tuning tutorials and guides.">
+    <meta name="keywords" content="guitar tuner, guitar tunings, free guitar tuner, online guitar tuner, clip-on tuner, pedal tuner, chromatic tuner, how to tune guitar, guitar tuning guide">
+    <title>Guitar Tuner Directory - Free Online Tuners, Best Tuners for Sale & Tuning Guides</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Guitar Tuner Directory - Complete Guide to Guitar Tuners">
+    <meta property="og:description" content="Find the best guitar tuners: online tools, clip-on & pedal tuners, plus expert tuning tutorials">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #161616;
+            --bg-tertiary: #1f1f1f;
+            --accent-primary: #f59e0b;
+            --accent-secondary: #d97706;
+            --text-primary: #f5f5f5;
+            --text-secondary: #a3a3a3;
+            --border-color: #2a2a2a;
+            --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --shadow-glow: 0 0 30px rgba(245, 158, 11, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            animation: slideDown 0.6s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            text-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 3px;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        /* Section Styles */
+        .section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            animation: fadeInUp 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--accent-primary);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* Card Styles */
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            transform-origin: left;
+        }
+        
+        .card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-5px);
+        }
+        
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--gradient-gold);
+            color: var(--bg-primary);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .card-badge.free {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        
+        .card-badge.premium {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .card-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-features li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .card-features li::before {
+            content: '▸';
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+        
+        .card-rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .stars {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+        }
+        
+        .rating-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .card-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .card-price .old-price {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            text-decoration: line-through;
+            margin-left: 0.5rem;
+        }
+        
+        .card-cta {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradient-gold);
+            color: var(--bg-primary);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .card-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+        
+        .card-cta.secondary {
+            background: transparent;
+            border: 2px solid var(--accent-primary);
+            color: var(--accent-primary);
+        }
+        
+        .card-cta.secondary:hover {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+        }
+        
+        /* Educational Resources Specific */
+        .resource-level {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: var(--bg-tertiary);
+            color: var(--accent-primary);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin-top: 6rem;
+            text-align: center;
+        }
+        
+        footer p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .hero {
+                padding: 4rem 1rem 2rem;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+            }
+        }
+        
+        /* Scroll Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GUITAR TUNER HQ</div>
+            <ul class="nav-links">
+                <li><a href="#online-tuners">Online Tuners</a></li>
+                <li><a href="#tuners-for-sale">Buy Tuners</a></li>
+                <li><a href="#learning-resources">Learn to Tune</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Your Complete Guitar Tuner Directory</h1>
+        <p>Find the perfect tuning solution: free online guitar tuners, professional clip-on and pedal tuners, plus comprehensive guides to master guitar tuning.</p>
+    </section>
+
+    <!-- Online Guitar Tuners Section -->
+    <section id="online-tuners" class="section scroll-reveal">
+        <div class="section-header">
+            <h2>Free Online Guitar Tuners</h2>
+            <p>Tune your guitar instantly with these powerful web-based tuners - no downloads required</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <span class="card-badge free">Free</span>
+                <h3>Tuner-Online.com</h3>
+                <p>Fast and accurate chromatic guitar tuner using your device's microphone. Perfect for acoustic and electric guitars with an intuitive interface that shows exactly when your strings are in tune.</p>
+                <ul class="card-features">
+                    <li>Works with microphone</li>
+                    <li>Chromatic tuning</li>
+                    <li>Visual feedback with color indicators</li>
+                    <li>No registration required</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text">Highly rated</div>
+                </div>
+                <a href="https://tuner-online.com/" target="_blank" rel="noopener" class="card-cta">Start Tuning Free</a>
+            </div>
+
+            <div class="card">
+                <span class="card-badge free">Free</span>
+                <h3>Fender Online Guitar Tuner</h3>
+                <p>From the legendary guitar brand, Fender's free tuner offers standard tuning, 12 alternate tunings, and custom options. Includes learning resources and works for acoustic, electric, and bass guitars.</p>
+                <ul class="card-features">
+                    <li>12+ alternate tunings</li>
+                    <li>Custom tuning options</li>
+                    <li>Free Fender Tune app integration</li>
+                    <li>7000+ interactive chords & scales</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text">Trusted brand</div>
+                </div>
+                <a href="https://www.fender.com/online-guitar-tuner/" target="_blank" rel="noopener" class="card-cta">Try Fender Tuner</a>
+            </div>
+
+            <div class="card">
+                <span class="card-badge premium">App Available</span>
+                <h3>GuitarTuna</h3>
+                <p>The world's most popular tuning app with over 100 million downloads. Features accurate tuning, metronome, games, and a massive song library with chords and tabs.</p>
+                <ul class="card-features">
+                    <li>100M+ downloads</li>
+                    <li>Offline mode available</li>
+                    <li>Chord library & games</li>
+                    <li>400,000+ songs library</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text">Editor's choice</div>
+                </div>
+                <a href="https://guitartuna.com/online-guitar-tuner" target="_blank" rel="noopener" class="card-cta">Get GuitarTuna</a>
+            </div>
+
+            <div class="card">
+                <span class="card-badge free">Free</span>
+                <h3>Guitar-Tuner.org</h3>
+                <p>Simple, effective tuner with both automatic microphone detection and manual tuning by ear. Features string detection and works for guitar, ukulele, bass, and more instruments.</p>
+                <ul class="card-features">
+                    <li>Auto string detection</li>
+                    <li>Tune by ear option</li>
+                    <li>Multi-instrument support</li>
+                    <li>Clean interface</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="rating-text">Great for beginners</div>
+                </div>
+                <a href="https://guitar-tuner.org/" target="_blank" rel="noopener" class="card-cta">Open Tuner</a>
+            </div>
+
+            <div class="card">
+                <span class="card-badge free">Free</span>
+                <h3>Pickup Music Guitar Tuner</h3>
+                <p>Accurate and easy-to-use tuning tool with support for multiple instruments. Features visual slider that turns green when in tune, plus access to alternate tunings.</p>
+                <ul class="card-features">
+                    <li>Visual tuning feedback</li>
+                    <li>Multiple alternate tunings</li>
+                    <li>Works for bass & ukulele</li>
+                    <li>No signup needed</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="rating-text">User friendly</div>
+                </div>
+                <a href="https://www.pickupmusic.com/tools/guitar-tuner" target="_blank" rel="noopener" class="card-cta">Start Tuning</a>
+            </div>
+
+            <div class="card">
+                <span class="card-badge free">Free</span>
+                <h3>Musicca Online Tuner</h3>
+                <p>Chromatic tuner detecting all 12 notes, perfect for guitar, ukulele, violin and more. Clean design with clear pitch adjustment guidance for maintaining optimal sound.</p>
+                <ul class="card-features">
+                    <li>All 12 chromatic notes</li>
+                    <li>Multiple instruments</li>
+                    <li>Clear visual indicators</li>
+                    <li>Educational focus</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="rating-text">Versatile</div>
+                </div>
+                <a href="https://www.musicca.com/tuner" target="_blank" rel="noopener" class="card-cta">Use Tuner</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tuners for Sale Section -->
+    <section id="tuners-for-sale" class="section scroll-reveal">
+        <div class="section-header">
+            <h2>Best Guitar Tuners for Sale</h2>
+            <p>Professional clip-on, pedal, and chromatic tuners from top brands</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <span class="card-badge">Best Seller</span>
+                <h3>TC Electronic PolyTune Clip</h3>
+                <p>Revolutionary clip-on tuner with polyphonic mode - strum all six strings at once. Features strobe accuracy of ±0.02 cents and ultra-bright 108-LED display visible in any lighting.</p>
+                <ul class="card-features">
+                    <li>Polyphonic, chromatic & strobe modes</li>
+                    <li>±0.02 cent accuracy</li>
+                    <li>108-LED ultra-bright display</li>
+                    <li>18 hours battery life</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text">4.8/5 - 2,500+ reviews</div>
+                </div>
+                <div class="card-price">$49.99</div>
+            </div>
+
+            <div class="card">
+                <span class="card-badge">Most Accurate</span>
+                <h3>Peterson StroboClip HD</h3>
+                <p>The gold standard in tuning accuracy with ±0.1 cent precision. Features HD display, 50+ sweetened tunings, and technology that accounts for guitar-specific tuning characteristics.</p>
+                <ul class="card-features">
+                    <li>±0.1 cent accuracy (industry-leading)</li>
+                    <li>High-definition screen</li>
+                    <li>50+ sweetened tunings</li>
+                    <li>Drop tuning & capo settings</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text">4.9/5 - Professional choice</div>
+                </div>
+                <div class="card-price">$69.99</div>
+            </div>
+
+            <div class="card">
+                <span class="card-badge">Budget Pick</span>
+                <h3>Snark ST-2 Super Tight</h3>
+                <p>Compact, affordable chromatic tuner perfect for all instruments. Fast tuning chip enhances speed and accuracy. Highly rated as the #1 budget clip-on tuner for four editions running.</p>
+                <ul class="card-features">
+                    <li>Chromatic tuning</li>
+                    <li>Compact & lightweight</li>
+                    <li>Fast response chip</li>
+                    <li>All instruments compatible</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="rating-text">4.6/5 - Best value</div>
+                </div>
+                <div class="card-price">$14.99</div>
+            </div>
+
+            <div class="card">
+                <span class="card-badge">Pedal</span>
+                <h3>Boss TU-3 Chromatic Tuner</h3>
+                <p>Industry-standard pedal tuner built like a tank. Features ±1 cent accuracy in strobe and chromatic modes, high-brightness mode for outdoor visibility, and drop tuning support up to 6 semitones.</p>
+                <ul class="card-features">
+                    <li>±1 cent accuracy</li>
+                    <li>21-segment LED meter</li>
+                    <li>Drop tuning support</li>
+                    <li>Legendary Boss durability</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text">4.8/5 - Industry standard</div>
+                </div>
+                <div class="card-price">$99.99</div>
+            </div>
+
+            <div class="card">
+                <span class="card-badge">Premium Pedal</span>
+                <h3>TC Electronic PolyTune 3</h3>
+                <p>Advanced polyphonic LED pedal tuner with selectable buffer or true bypass. Tune all strings simultaneously or use ultra-accurate strobe mode. Built-in BONAFIDE buffer maintains signal integrity.</p>
+                <ul class="card-features">
+                    <li>Polyphonic tuning mode</li>
+                    <li>True bypass or buffer option</li>
+                    <li>Ultra-bright display</li>
+                    <li>±0.1 cent strobe accuracy</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text">4.9/5 - Pro favorite</div>
+                </div>
+                <div class="card-price">$129.99</div>
+            </div>
+
+            <div class="card">
+                <span class="card-badge">Compact Pedal</span>
+                <h3>Ibanez BigMini Tuner</h3>
+                <p>Micro-sized pedal with maximum precision. Covers 27.5Hz to 4,186Hz range for any tuning configuration. Features needle and strobe display modes with unique calibration option.</p>
+                <ul class="card-features">
+                    <li>Ultra-compact 2.8" width</li>
+                    <li>Needle & strobe modes</li>
+                    <li>True bypass switching</li>
+                    <li>Bass & guitar compatible</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="rating-text">4.7/5 - Space saver</div>
+                </div>
+                <div class="card-price">$69.99</div>
+            </div>
+
+            <div class="card">
+                <span class="card-badge">Clip-On</span>
+                <h3>D'Addario NS Micro Tuner</h3>
+                <p>Discreet, lightweight headstock tuner with bright, easily readable display. Perfect for keeping tuning on the down low during performances. Affordable option for electric, acoustic, and bass.</p>
+                <ul class="card-features">
+                    <li>Ultra-compact design</li>
+                    <li>Bright display</li>
+                    <li>Permanent fixture option</li>
+                    <li>Multi-instrument</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="rating-text">4.5/5 - Discreet tuning</div>
+                </div>
+                <div class="card-price">$19.99</div>
+            </div>
+
+            <div class="card">
+                <span class="card-badge">Budget Pedal</span>
+                <h3>On-Stage Mini Pedal Tuner</h3>
+                <p>Pocket-sized chromatic tuner at an incredible price point. ±0.5 cent tolerance with selectable 430Hz-450Hz range. True-bypass circuitry ensures consistent tone. Thinnest pedal at 1.5" width.</p>
+                <ul class="card-features">
+                    <li>±0.5 cent tolerance</li>
+                    <li>Strobe & regular modes</li>
+                    <li>True bypass</li>
+                    <li>Compact 1.5" width</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★☆</div>
+                    <div class="rating-text">4.6/5 - Great value</div>
+                </div>
+                <div class="card-price">$39.99</div>
+            </div>
+
+            <div class="card">
+                <span class="card-badge">Premium Clip</span>
+                <h3>Boss TU-05 Clip-On Tuner</h3>
+                <p>Rechargeable Boss quality in clip-on form. High-contrast color display for effortless tuning in any environment. Single USB charge provides 10+ hours of battery life.</p>
+                <ul class="card-features">
+                    <li>Rechargeable via USB</li>
+                    <li>10+ hours battery</li>
+                    <li>High-contrast color display</li>
+                    <li>Boss reliability</li>
+                </ul>
+                <div class="card-rating">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text">4.8/5 - Premium quality</div>
+                </div>
+                <div class="card-price">$44.99</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Resources Section -->
+    <section id="learning-resources" class="section scroll-reveal">
+        <div class="section-header">
+            <h2>Guitar Tuning Tutorials & Guides</h2>
+            <p>Master the art of tuning with these comprehensive educational resources</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <span class="resource-level">Beginner Friendly</span>
+                <h3>School of Rock - Beginner's Guide to Tuning</h3>
+                <p>Comprehensive introduction covering tuning pegs, how to tune with and without a tuner, identifying guitar string notes, and keeping your guitar in tune longer. Perfect starting point for new players.</p>
+                <ul class="card-features">
+                    <li>Basic parts of guitar tuning</li>
+                    <li>Electronic tuner guide</li>
+                    <li>Tuning by ear methods</li>
+                    <li>Tips for staying in tune</li>
+                </ul>
+                <a href="https://www.schoolofrock.com/resources/guitar/beginners-guide-to-tuning-a-guitar" target="_blank" rel="noopener" class="card-cta secondary">Read Guide</a>
+            </div>
+
+            <div class="card">
+                <span class="resource-level">Beginner</span>
+                <h3>Martin Guitar - Step-by-Step Tuning Guide</h3>
+                <p>Learn from Martin's manufacturing manager Dave Doll. Covers tuning with clip-on tuners, built-in electronics, and by ear using harmonics. Includes expert tips on string care and tuning stability.</p>
+                <ul class="card-features">
+                    <li>Video demonstrations</li>
+                    <li>Tuning by ear with pitch pipe</li>
+                    <li>Using harmonics & intervals</li>
+                    <li>String maintenance tips</li>
+                </ul>
+                <a href="https://www.martinguitar.com/blog-categories/tips-tutorials/blog-082025-how-to-tune-your-guitar.html" target="_blank" rel="noopener" class="card-cta secondary">Watch & Learn</a>
+            </div>
+
+            <div class="card">
+                <span class="resource-level">All Levels</span>
+                <h3>JustinGuitar - How to Tune for Beginners</h3>
+                <p>One of the world's most popular free guitar lessons from Justin Sandercoe. Essential viewing before you start playing - get used to the right sound from day one.</p>
+                <ul class="card-features">
+                    <li>Free video lesson</li>
+                    <li>Step-by-step instruction</li>
+                    <li>Part of complete course</li>
+                    <li>Trusted by millions</li>
+                </ul>
+                <a href="https://www.justinguitar.com/guitar-lessons/how-to-tune-a-guitar-for-beginners-b1-101" target="_blank" rel="noopener" class="card-cta secondary">Start Lesson</a>
+            </div>
+
+            <div class="card">
+                <span class="resource-level">Beginner to Intermediate</span>
+                <h3>D'Addario - Complete Tuning Guide</h3>
+                <p>Professional guide covering standard tuning (E-A-D-G-B-E), using tuners effectively, ear training, and advanced tips for setup and maintenance. Includes helpful mnemonic: "Eddie Ate Dynamite, Good Bye Eddie!"</p>
+                <ul class="card-features">
+                    <li>Standard tuning explained</li>
+                    <li>Tuner usage guide</li>
+                    <li>String stretching techniques</li>
+                    <li>Bridge setup tips</li>
+                </ul>
+                <a href="https://www.daddario.com/the-lesson-room/guitar/how-to-tune-a-guitar/" target="_blank" rel="noopener" class="card-cta secondary">Read Tutorial</a>
+            </div>
+
+            <div class="card">
+                <span class="resource-level">All Levels</span>
+                <h3>National Guitar Academy - Quick Guide</h3>
+                <p>Free lesson teaching everything from basic techniques to advanced tuning tips. Covers four methods: electronic tuner, smartphone app, other instruments, and using the guitar's own strings.</p>
+                <ul class="card-features">
+                    <li>4 different tuning methods</li>
+                    <li>Machine head explanation</li>
+                    <li>App recommendations</li>
+                    <li>Fretboard notes guide</li>
+                </ul>
+                <a href="https://nationalguitaracademy.com/guides/beginners/how-to-tune-a-guitar/" target="_blank" rel="noopener" class="card-cta secondary">Access Guide</a>
+            </div>
+
+            <div class="card">
+                <span class="resource-level">Technical</span>
+                <h3>Guitar Craft Academy - Advanced Tuning</h3>
+                <p>In-depth guide covering tuning process fundamentals, different tuner types, pitch pipes, tuning forks, and why tuning is crucial for sound quality and instrument maintenance.</p>
+                <ul class="card-features">
+                    <li>Technical tuning theory</li>
+                    <li>Tuner type comparisons</li>
+                    <li>Intonation & setup</li>
+                    <li>Professional insights</li>
+                </ul>
+                <a href="https://nashville.mi.edu/beginners-guide-tuning-a-guitar/" target="_blank" rel="noopener" class="card-cta secondary">Learn More</a>
+            </div>
+
+            <div class="card">
+                <span class="resource-level">Beginner</span>
+                <h3>Guitar Lessons - Three-Part Tutorial</h3>
+                <p>Comprehensive lesson split into tuning theory & tips, using electronic tuners, and tuning by ear. Covers the musical alphabet, flats, sharps, and the 5th fret tuning method.</p>
+                <ul class="card-features">
+                    <li>Musical theory basics</li>
+                    <li>Electronic tuner mastery</li>
+                    <li>5th fret method</li>
+                    <li>Double-check techniques</li>
+                </ul>
+                <a href="https://www.guitarlessons.com/guitar-lessons/beginner-guitar-quick-start-series/how-to-tune-your-guitar" target="_blank" rel="noopener" class="card-cta secondary">Start Tutorial</a>
+            </div>
+
+            <div class="card">
+                <span class="resource-level">All Levels</span>
+                <h3>Yousician - Ultimate Tuning Guide</h3>
+                <p>Complete guide covering acoustic vs electric tuning, standard tuning notes, tuning by ear vs tuner app, and alternate tunings. Includes GuitarTuna app integration for easy practice.</p>
+                <ul class="card-features">
+                    <li>Acoustic vs electric guide</li>
+                    <li>Tuner app integration</li>
+                    <li>Alternate tunings intro</li>
+                    <li>Interactive learning</li>
+                </ul>
+                <a href="https://yousician.com/blog/how-to-tune-a-guitar" target="_blank" rel="noopener" class="card-cta secondary">Read Article</a>
+            </div>
+
+            <div class="card">
+                <span class="resource-level">Reference</span>
+                <h3>ChordBuddy - Traditional Tuning Methods</h3>
+                <p>Guide to both modern electronic tuning and old-fashioned ear tuning methods. Explains standard tuning string names with helpful mnemonics and the 5th fret relative tuning technique.</p>
+                <ul class="card-features">
+                    <li>String name memorization</li>
+                    <li>Electronic vs traditional</li>
+                    <li>Relative tuning method</li>
+                    <li>Playing with others tips</li>
+                </ul>
+                <a href="https://www.chordbuddy.com/guitar-learning-system-for-everyone/how-to-play-the-guitar-for-beginners/guitar-tuning/" target="_blank" rel="noopener" class="card-cta secondary">View Guide</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Guitar Tuner Directory. Find the best guitar tuners and master tuning techniques.</p>
+        <div class="footer-links">
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            <a href="#online-tuners">Online Tuners</a>
+            <a href="#tuners-for-sale">Buy Tuners</a>
+            <a href="#learning-resources">Learning Resources</a>
+        </div>
+        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 2rem;">
+            This is an educational project. All product information and prices are for demonstration purposes. 
+            Visit manufacturer websites for current pricing and availability.
+        </p>
+    </footer>
+
+    <script>
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
