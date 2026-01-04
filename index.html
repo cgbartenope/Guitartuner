@@ -161,7 +161,78 @@
             max-width: 700px;
             margin: 0 auto 3rem;
         }
-        
+
+        /* Hero Images Section */
+        .hero-images {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            animation: fadeIn 1s ease-out 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .hero-image-card {
+            flex: 1;
+            max-width: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-glow);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-image-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(245, 158, 11, 0.25);
+        }
+
+        .hero-image-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-image-caption {
+            background: var(--bg-secondary);
+            padding: 1rem 1.25rem;
+            text-align: center;
+        }
+
+        .hero-image-caption h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent-primary);
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+        }
+
+        .hero-image-caption p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-images {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                padding: 0 1.5rem 3rem;
+            }
+
+            .hero-image-card {
+                max-width: 100%;
+            }
+
+            .hero-image-card img {
+                height: 220px;
+            }
+        }
+
         /* Blog Commentary Styles */
         .blog-commentary {
             max-width: 900px;
@@ -522,7 +593,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">GUITAR TUNER HQ</div>
+            <div class="logo">guitartunersite.com</div>
             <ul class="nav-links">
                 <li><a href="#online-tuners">Online Tuners</a></li>
                 <li><a href="#tuner-apps">Tuner Apps</a></li>
@@ -533,8 +604,26 @@
     </header>
 
     <section class="hero">
-        <h1>Welcome To The Guitar Tuner Headquarters</h1>
+        <h1>Welcome to Guitartunersite.com.</h1>
         <p>Find the perfect tuning solution: free online guitar tuners, professional clip-on and pedal tuners, plus comprehensive guides to master guitar tuning.</p>
+    </section>
+
+    <!-- Hero Images Section -->
+    <section class="hero-images">
+        <div class="hero-image-card">
+            <img src="images/hand-tuning.jpg" alt="Hand tuning a guitar - adjusting the tuning pegs">
+            <div class="hero-image-caption">
+                <h3>Perfect Your Technique</h3>
+                <p>Learn the art of manual guitar tuning</p>
+            </div>
+        </div>
+        <div class="hero-image-card">
+            <img src="images/tuner-dial.jpg" alt="Guitar tuner dial showing accurate pitch measurement">
+            <div class="hero-image-caption">
+                <h3>Precision Tuning</h3>
+                <p>Get accurate results every time</p>
+            </div>
+        </div>
     </section>
 
     <!-- Blog Commentary Section -->
